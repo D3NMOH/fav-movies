@@ -1,4 +1,3 @@
-// App.jsx
 import { useState } from "react";
 import "./App.css";
 import { Movie } from "./components/Movie";
@@ -23,7 +22,32 @@ function App() {
       director: "James Cameron",
       favorite: false,
     },
+    {
+      title: "Avatar: der Weg des Wassers",
+      released: "2023",
+      director: "James Cameron",
+      favorite: false,
+    },
+    {
+      title: "Avatar: der Weg des Wassers",
+      released: "2023",
+      director: "James Cameron",
+      favorite: false,
+    },
+    {
+      title: "Avatar: der Weg des Wassers",
+      released: "2023",
+      director: "James Cameron",
+      favorite: false,
+    },
+    {
+      title: "Avatar: der Weg des Wassers",
+      released: "2023",
+      director: "James Cameron",
+      favorite: false,
+    },
   ]);
+
   const [totalMovies, setTotalMovies] = useState(movies.length);
 
   const removeMovie = (index) => {
@@ -35,9 +59,10 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Movie List</h1>
-        <p>Total in list: {totalMovies}</p>
+      {" "}
+      <h1>Movie List</h1>
+      <p>Total in list: {totalMovies}</p>
+      <div className="favs">
         {movies.map((movie, index) => (
           <Movie
             key={index}
