@@ -54,7 +54,7 @@
 .movie:hover {
   background-color: #fff;
   box-shadow: 0 10px 20px #ff0000;
-  scale: 1.05;
+  scale: 1.02;
   transition: all 0.2s;
   .favbtn {
     grid-area: like;
@@ -92,7 +92,7 @@
     border: none;
     border: 1px solid rgb(255, 0, 0);
     background-image: linear-gradient(rgb(255, 0, 0), rgb(85, 0, 0));
-    transition: linear-gradient 0.2s;
+    transition: all 0.2s;
   }
 
   .rmbtn:hover {

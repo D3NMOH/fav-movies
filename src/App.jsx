@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Movie } from "./components/Movie";
+import { MovieForm } from "./components/MovieForm";
 
 function App() {
   const [movies, setMovies] = useState([
@@ -57,11 +58,16 @@ function App() {
     setTotalMovies(newMovies.length);
   };
 
+  const addMovie = (newMovie) => {
+    setMovies((prevMovies) => [...prevMovies, newMovie]);
+    setTotalMovies((prevTotal) => prevTotal + 1);
+  };
+
   return (
     <>
-      {" "}
       <h1>Movie List</h1>
       <p>Total in list: {totalMovies}</p>
+      <MovieForm addMovie={addMovie} />
       <div className="favs">
         {movies.map((movie, index) => (
           <Movie
