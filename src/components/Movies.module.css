@@ -1,0 +1,105 @@
+.movie {
+  display: grid;
+  grid-template-areas: "title title title" "director director director" "year year year" "like . rm";
+  grid-template-columns: 50px 80px 50px;
+  grid-template-rows: 50px 20px 20px 40px;
+  row-gap: 50px;
+  column-gap: 10px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #9b9b9b;
+  color: #000;
+  transition: all 0.2s;
+  .favbtn {
+    background-color: transparent;
+    grid-area: like;
+    border: 0;
+    color: #000;
+    scale: 1.5;
+    transition: all 0.2s;
+  }
+  .title {
+    grid-area: title;
+  }
+  .director {
+    grid-area: director;
+  }
+  .year {
+    grid-area: year;
+  }
+  .favbtn-active {
+    grid-area: like;
+    background-color: transparent;
+    border: 0;
+    scale: 1.5;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s;
+  }
+  .rmbtn {
+    padding: 3px;
+    border: none;
+    border: #000 1px solid;
+    grid-area: rm;
+    background-image: linear-gradient(
+      rgb(198, 198, 198),
+      rgb(100, 100, 100),
+      rgb(40, 40, 40)
+    );
+    transition: linear-gradient 0.2s;
+  }
+}
+.movie:hover {
+  background-color: #fff;
+  box-shadow: 0 10px 20px #ff0000;
+  scale: 1.05;
+  transition: all 0.2s;
+  .favbtn {
+    grid-area: like;
+    background-color: transparent;
+    border: 0;
+    color: #000;
+    scale: 1.5;
+    transition: all 0.2s;
+  }
+  .favbtn:hover {
+    background-color: transparent;
+    border: 0;
+    scale: 1.5;
+    color: red;
+    text-shadow: 0 0 10px #ff0000;
+  }
+  .favbtn:active {
+    scale: 0.98;
+  }
+  .favbtn-active {
+    grid-area: like;
+    background-color: transparent;
+    border: 0;
+    scale: 1.5;
+    color: red;
+    transition: all 0.2s;
+  }
+  .favbtn-active:hover {
+    text-shadow: 0 0 10px #ff0000;
+  }
+  .favbtn-active:active {
+    scale: 0.98;
+  }
+  .rmbtn {
+    border: none;
+    border: 1px solid rgb(255, 0, 0);
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(85, 0, 0));
+    transition: linear-gradient 0.2s;
+  }
+
+  .rmbtn:hover {
+    background-image: linear-gradient(rgb(172, 0, 0), rgb(85, 0, 0));
+  }
+  .rmbtn:active {
+    background-image: linear-gradient(#550000, #550000);
+    scale: 0.98;
+  }
+}
